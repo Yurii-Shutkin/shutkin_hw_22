@@ -1,4 +1,4 @@
-const getParalindrom = function(num, stepsArr = []) {
+const getPalindrom = function(num, stepsArr = []) {
     const obj = {};
     let arr = [num];
     arr = arr.join().split('');
@@ -10,10 +10,10 @@ const getParalindrom = function(num, stepsArr = []) {
     }
     arr = +arr.join('');
     stepsArr.push(num);
-    return getParalindrom(num + arr, stepsArr);
+    return getPalindrom(num + arr, stepsArr);
 }
 
-console.log(getParalindrom(96));
-console.log(getParalindrom(39));
-console.log(getParalindrom(134));
-console.log(getParalindrom(89));
+console.log(getPalindrom(96));
+console.log(getPalindrom(39));
+console.log(getPalindrom(134));
+console.log(getPalindrom(89));
