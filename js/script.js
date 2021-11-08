@@ -1,14 +1,13 @@
 const getPalindrom = function(num, stepsCounter = 0) {
     const obj = {};
-    let arr = [num];
-    arr = arr.join().split('');
+    let arr = [num].join().split('');
     
     if(arr.join() === arr.reverse().join()) {
         obj.result = num;
         obj.steps = stepsCounter;
         return obj;
     }
-    
+
     arr = +arr.join('');
     return getPalindrom(num + arr, stepsCounter += 1);
 }
