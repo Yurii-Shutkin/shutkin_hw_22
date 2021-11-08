@@ -8,9 +8,9 @@ const getPalindrom = function(num, stepsCounter = 0) {
         obj.steps = stepsCounter;
         return obj;
     }
+    
     arr = +arr.join('');
-    stepsCounter += 1;
-    return getPalindrom(num + arr, stepsCounter);
+    return getPalindrom(num + arr, stepsCounter += 1);
 }
 
 console.log(getPalindrom(96));
